@@ -21,3 +21,15 @@ Analyzed:
 
 File:
 `sent_email_metrics.sql`
+
+### 2. Revenue Prediction Fulfillment
+
+Analyzed:
+- Actual revenue
+- Predicted revenue
+- Cumulative revenue
+- Cumulative prediction
+- Revenue fulfillment percentage
+
+File:
+`prediction_fulfillment_with_cte.sql`
