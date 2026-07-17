@@ -33,3 +33,17 @@ Analyzed:
 
 File:
 `prediction_fulfillment_with_cte.sql`
+
+### 3. Registration and Revenue Analysis
+
+Analyzed:
+- Sessions
+- Registrations
+- Registration rate
+- Revenue
+- Revenue by device
+- Revenue by operating system
+- Email messages sent
+
+File:
+`registrations_and_revenue.sql`
