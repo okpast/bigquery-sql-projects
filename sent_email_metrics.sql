@@ -3,7 +3,7 @@
 -- Metrics:
 -- Revenue
 -- Marketing Cost
--- Email Sent
+-- Emails Sent
 -- Email Open Rate
 -- Email Click Rate
 -- Registration Count
@@ -96,8 +96,10 @@ SELECT  date,
 FROM  registration_cte
 )
 
-SELECT  EXTRACT(YEAR FROM date) AS year,
-        EXTRACT(MONTH FROM date) AS month,
+SELECT  DATE_TRUNC(date, MONTH) AS month_date,
+        --EXTRACT(YEAR FROM date) AS year,
+        --EXTRACT(MONTH FROM date) AS month,
+        
         SUM(revenue)  AS revenue,
         SUM(cost) AS cost,
         SUM(sent_cnt) AS sent_cnt,
