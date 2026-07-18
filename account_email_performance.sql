@@ -84,16 +84,16 @@ GROUP BY 1, 2, 3, 4, 5
 
 country_agg AS (
 SELECT  *,
-        SUM(account_cnt) OVER (PARTITION BY country) AS total_country_account_cnt,
-        SUM(sent_msg) OVER (PARTITION BY country) AS total_country_sent_cnt
+        SUM(account_cnt) OVER (PARTITION BY country) AS country_account_total,
+        SUM(sent_msg) OVER (PARTITION BY country) AS country_sent_total
 
 FROM    combined_agg
 ),
 
 final_cte AS (
 SELECT  *,
-        DENSE_RANK() OVER (ORDER BY total_country_account_cnt DESC) AS rank_total_country_account_cnt,
-        DENSE_RANK() OVER (ORDER BY total_country_sent_cnt DESC) AS rank_total_country_sent_cnt
+        DENSE_RANK() OVER (ORDER BY country_account_total DESC) AS country_account_rank,
+        DENSE_RANK() OVER (ORDER BY country_sent_total DESC) AS country_sent_rank
 
 FROM  country_agg
 )
@@ -110,13 +110,12 @@ SELECT  date,
         open_msg,
         visit_msg,
 
-        total_country_account_cnt,
-        total_country_sent_cnt,
+        country_account_total,
+        country_sent_total,
 
-        rank_total_country_account_cnt,        
-        rank_total_country_sent_cnt
+        country_account_rank,        
+        country_sent_rank
 
 FROM    final_cte
-WHERE   rank_total_country_account_cnt <= 10
-OR      rank_total_country_sent_cnt <= 10
-
+WHERE   country_account_rank <= 10
+OR      country_sent_rank <= 10
