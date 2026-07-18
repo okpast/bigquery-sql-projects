@@ -58,3 +58,14 @@ Analyzed:
 
 SQL file:
 `user_engagement_analysis.sql`
+
+### 5. Account Email Performance
+
+Analyzed:
+- Account metrics
+- Email messages sent, opened, and visited
+- Country-level account and email totals
+- Top 10 countries by account and email activity
+
+SQL file:
+`account_email_performance.sql`
