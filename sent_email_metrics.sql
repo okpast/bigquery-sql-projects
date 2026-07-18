@@ -109,5 +109,6 @@ SELECT  DATE_TRUNC(date, MONTH) AS month_date,
         
         SUM(account_cnt) AS registration_cnt
 FROM    result_cte
-GROUP BY 1, 2
-ORDER BY 1, 2
+        
+GROUP BY month_date
+ORDER BY month_date
