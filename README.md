@@ -19,7 +19,7 @@ Analyzed:
 - Click rate
 - Registrations
 
-File:
+SQL file:
 `sent_email_metrics.sql`
 
 ### 2. Revenue Prediction Fulfillment
@@ -31,7 +31,7 @@ Analyzed:
 - Cumulative prediction
 - Revenue fulfillment percentage
 
-File:
+SQL file:
 `prediction_fulfillment_with_cte.sql`
 
 ### 3. Registration and Revenue Analysis
@@ -45,5 +45,16 @@ Analyzed:
 - Revenue by operating system
 - Email messages sent
 
-File:
+SQL file:
 `registrations_and_revenue.sql`
+
+### 4. User Engagement Analysis
+
+Analyzed:
+- Average user engagement time
+- Sessions by country and device
+- Session share by country and device
+- Device ranking by average engagement time within each country
+
+SQL file:
+`user_engagement_analysis.sql`
