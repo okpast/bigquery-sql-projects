@@ -14,10 +14,13 @@ SQL projects and analytics tasks using Google BigQuery.
 Analyzed:
 - Revenue
 - Marketing costs
-- Email campaign performance
-- Open rate
-- Click rate
+- Emails sent
+- Email open rate
+- Email click rate
 - Registrations
+
+Visualization:
+- Looker Studio dashboard
 
 SQL file:
 `sent_email_metrics.sql`
