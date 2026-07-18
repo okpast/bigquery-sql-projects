@@ -21,7 +21,7 @@ SELECT  sp.country,
 
         ROUND(AVG(e.time_msec) / 60000, 2) AS avg_time_min,
         
-        RANK() OVER (PARTITION BY sp.country ORDER BY AVG(e.time_msec) DESC) AS device_rank
+        RANK() OVER (PARTITION BY sp.country ORDER BY AVG(e.time_msec) DESC) AS device_rank_by_country
 
 FROM    `data-analytics-mate.DA.session_params` sp
 
