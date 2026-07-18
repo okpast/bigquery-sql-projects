@@ -45,7 +45,6 @@ JOIN    `data-analytics-mate.DA.account_session` acs
 ON      es.id_account = acs.account_id
 JOIN    `data-analytics-mate.DA.session` s
 ON      acs.ga_session_id = s.ga_session_id
---WHERE   es.id_account = 658711
 GROUP BY  1
 ),
 
@@ -56,7 +55,6 @@ SELECT  s.date,
 FROM    `data-analytics-mate.DA.account_session` acs
 JOIN    `data-analytics-mate.DA.session` s
 ON      acs.ga_session_id = s.ga_session_id
---WHERE   acs.ga_session_id = 3399339465
 GROUP BY  s.date
 ),
 
