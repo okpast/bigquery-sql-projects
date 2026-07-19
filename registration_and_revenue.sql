@@ -57,10 +57,10 @@ ON      acs.ga_session_id = sp.ga_session_id
 GROUP BY sp.country, s.date
 )
 
-SELECT  reg.country,
-        DATE_TRUNC(reg.date, MONTH) AS month_date,
+SELECT  reg.country, 
         reg.date,
-
+        DATE_TRUNC(reg.date, MONTH) AS month_date,
+        
         reg.session_cnt,
         reg.account_cnt,
 
