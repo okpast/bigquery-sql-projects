@@ -1,6 +1,6 @@
 # Sent Email Metrics Analysis
 
-SQL project created in Google BigQuery.
+Google BigQuery SQL project.
 
 ## Description
 
