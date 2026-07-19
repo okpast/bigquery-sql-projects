@@ -27,10 +27,11 @@ GROUP BY date
 )
 
 SELECT  date,
-        -- revenue,
-        -- SUM(revenue) OVER (ORDER BY date) AS cumulative_revenue,
-        -- predict,
-        -- SUM(predict) OVER (ORDER BY date) AS cumulative_predict,
+        revenue,
+        SUM(revenue) OVER (ORDER BY date) AS cumulative_revenue,
+        predict,
+        SUM(predict) OVER (ORDER BY date) AS cumulative_predict,
+        
         ROUND(SUM(revenue) OVER (ORDER BY date) / SUM(predict) OVER (ORDER BY date) * 100, 2) AS percentage
 
 FROM( SELECT  date,
