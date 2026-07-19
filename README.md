@@ -29,16 +29,15 @@ SQL projects and analytics tasks using Google BigQuery.
 [sent_email_metrics.sql](sent_email_metrics/sent_email_metrics.sql)
 
 ### 2. Revenue Prediction Fulfillment
-
-Analyzed:
+**Analyzed:**
 - Actual revenue
 - Predicted revenue
 - Cumulative revenue
 - Cumulative prediction
 - Revenue fulfillment percentage
 
-SQL file:
-`prediction_fulfillment_with_cte.sql`
+**SQL file:**
+[prediction_fulfillment_with_cte.sql](prediction_fulfillment_with_cte.sql)
 
 ### 3. Registration and Revenue Analysis
 
