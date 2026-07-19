@@ -1,9 +1,6 @@
 -- Project: Revenue Prediction Fulfillment
 -- Tool: Google BigQuery
--- Description:
--- This query combines actual and predicted revenue,
--- calculates cumulative values using window functions,
--- and measures prediction fulfillment over time.
+-- Description: Compares actual and predicted revenue, calculates cumulative values using window functions, and measures revenue fulfillment over time.
 
 WITH  revenue_predict_cte AS (
 SELECT  s.date,
