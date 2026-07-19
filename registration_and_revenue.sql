@@ -1,6 +1,6 @@
 -- Project: Registration and Revenue Analysis
 -- Tool: Google BigQuery
--- Description: Analyzes registration, revenue, and email metrics by country and date.
+-- Description: Analyzes registrations, revenue, and email metrics by country and date.
 
 WITH registration_cte AS (
 SELECT  sp.country,
