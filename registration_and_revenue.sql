@@ -18,7 +18,7 @@ ON      s.ga_session_id = acs.ga_session_id
 GROUP BY sp.country, s.date
 ),
 
-  revenue_cte AS (
+revenue_cte AS (
 SELECT  sp.country,
         s.date,
         
@@ -57,24 +57,28 @@ ON      acs.ga_session_id = sp.ga_session_id
 GROUP BY sp.country, s.date
 )
 
-SELECT  registration_cte.country,
-        registration_cte.date,
-        
-        registration_cte.session_cnt,
-        ROUND(SAFE_DIVIDE(registration_cte.account_cnt, registration_cte.session_cnt) * 100, 2) AS registration_percent,
-        
-        revenue_cte.revenue,
-        revenue_cte.revenue_mobile,
-        revenue_cte.revenue_ios,
-        revenue_cte.revenue_android,
-        
-        email_cte.sent_msg
+SELECT  reg.country,
+        DATE_TRUNC(reg.date, MONTH) AS month_date,
+        reg.date,
 
-FROM    registration_cte
-LEFT JOIN revenue_cte
-ON      registration_cte.country = revenue_cte.country
-AND     registration_cte.date = revenue_cte.date
-LEFT JOIN email_cte
-ON      registration_cte.country = email_cte.country
-AND     registration_cte.date = email_cte.date
+        reg.session_cnt,
+        reg.account_cnt,
 
+        ROUND(SAFE_DIVIDE(reg.account_cnt, reg.session_cnt) * 100, 2) AS registration_percent,
+
+        rev.revenue,
+        rev.revenue_mobile,
+        rev.revenue_ios,
+        rev.revenue_android,
+
+        em.sent_msg
+
+FROM    registration_cte AS reg
+  
+LEFT JOIN revenue_cte AS rev
+ON      reg.country = rev.country
+AND     reg.date = rev.date
+
+LEFT JOIN email_cte AS em
+ON      reg.country = em.country
+AND     reg.date = em.date;
