@@ -30,6 +30,8 @@ SQL projects and analytics tasks using Google BigQuery.
 
 ### 2. Revenue Prediction Fulfillment
 
+Compares actual and predicted revenue and calculates the revenue fulfillment percentage.
+
 **Analyzed:**
 - Actual revenue
 - Predicted revenue
