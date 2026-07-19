@@ -28,6 +28,27 @@ Project:
 SQL file:
 [sent_email_metrics.sql](sent_email_metrics/sent_email_metrics.sql)
 
+### 1. Sent Email Metrics Analysis
+
+**Analyzed:**
+- Revenue
+- Marketing costs
+- Emails sent
+- Email open rate
+- Email click rate
+- Registrations
+
+**Visualization:** Looker Studio dashboard
+
+**Project:** [sent_email_metrics](sent_email_metrics/)
+**SQL file:** [sent_email_metrics.sql](sent_email_metrics/sent_email_metrics.sql)
+
+
+
+
+
+
+
 ### 2. Revenue Prediction Fulfillment
 
 Analyzed:
