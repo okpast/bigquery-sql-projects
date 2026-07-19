@@ -22,8 +22,9 @@ Analyzed:
 Visualization:
 - Looker Studio dashboard
 
-Folder:
-`sent_email_metrics/`
+Files:
+- `sent_email_metrics/sent_email_metrics.sql`
+- `sent_email_metrics/dashboard.png`
 
 ### 2. Revenue Prediction Fulfillment
 
