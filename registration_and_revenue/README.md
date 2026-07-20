@@ -8,13 +8,13 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 ## Metrics
 
-- Revenue
 - Sessions
 - Registrations
-- Registration Rate
-- Emails Sent
-- Revenue by Device
-- Revenue by Operating System
+- Registration rate
+- Revenue
+- Revenue by device
+- Revenue by operating system
+- Emails sent
 
 ## SQL
 
@@ -22,6 +22,6 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 ## Dashboard
 
-[Open in Looker Studio](https://...)
+[Open in Looker Studio](https://datastudio.google.com/reporting/b3ea0cc8-6a30-4fef-8d0a-e81ad4b89bdd)
 
 ![Dashboard](dashboard.png)
