@@ -10,11 +10,11 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 - Sessions
 - Registrations
-- Registration rate
+- Registration Rate
 - Revenue
-- Revenue by device
-- Revenue by operating system
-- Emails sent
+- Revenue by Device
+- Revenue by Operating System
+- Emails Sent
 
 ## SQL
 
