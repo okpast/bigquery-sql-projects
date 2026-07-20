@@ -44,17 +44,23 @@ Compares actual and predicted revenue and calculates the revenue fulfillment per
 
 ### 3. Registration and Revenue Analysis
 
-Analyzed:
+**Analyzed:**
 - Sessions
 - Registrations
 - Registration rate
 - Revenue
 - Revenue by device
 - Revenue by operating system
-- Email messages sent
+- Emails sent
 
-SQL file:
-`registrations_and_revenue.sql`
+**Visualization:**
+- Looker Studio dashboard
+
+**Project:**
+[registration_and_revenue](registration_and_revenue/)
+
+**SQL file:**
+[registration_and_revenue.sql](registration_and_revenue/registration_and_revenue.sql)
 
 ### 4. User Engagement Analysis
 
