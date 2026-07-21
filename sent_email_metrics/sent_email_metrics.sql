@@ -96,8 +96,8 @@ SELECT  DATE_TRUNC(date, MONTH) AS month_date,
         SUM(cost) AS cost,
         SUM(sent_cnt) AS sent_cnt,
 
-        SAFE_DIVIDE(SUM(open_cnt), SUM(sent_cnt)) * 100 AS open_rate,
-        SAFE_DIVIDE(SUM(click_cnt), SUM(sent_cnt)) * 100 AS click_rate,
+        SAFE_DIVIDE(SUM(open_cnt), SUM(sent_cnt)) AS open_rate,
+        SAFE_DIVIDE(SUM(click_cnt), SUM(sent_cnt)) AS click_rate,
         
         SUM(account_cnt) AS registration_cnt
 FROM    result_cte
