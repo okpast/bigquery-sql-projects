@@ -20,6 +20,7 @@ Analyzes marketing performance and email campaign metrics by month.
 [sent_email_metrics.sql](sent_email_metrics.sql)
 
 ## Dashboard
+
 [Open in Looker Studio](https://datastudio.google.com/reporting/d37de29e-8715-4bf3-978d-ddfdd1700fac)
 
 ![Dashboard](dashboard.png)
