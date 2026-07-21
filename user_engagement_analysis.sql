@@ -1,10 +1,10 @@
 -- Project: User Engagement Analysis
 -- Tool: Google BigQuery
--- Description: Analyzes average user engagement time by country and device.
+-- Description: Analyzes average user engagement time and device ranking by country, device, and date.
 
 WITH engagement_cte AS (
 SELECT  ga_session_id,
-        MAX(params.value.int_value) AS time_msec
+        MAX(params.value.int_value) AS engagement_time_msec
 
 FROM    `data-analytics-mate.DA.event_params`,
         UNNEST(event_params) AS params
@@ -13,21 +13,25 @@ WHERE   params.key = 'engagement_time_msec'
 GROUP BY ga_session_id
 )
 
-SELECT  sp.country,
+SELECT  s.date,
+        DATE_TRUNC(s.date, MONTH) AS month_date,
+
+        sp.country,
         sp.device,
 
         COUNT(*) AS sessions,
-        ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS session_share_percent,
 
-        ROUND(AVG(e.time_msec) / 60000, 2) AS avg_time_min,
+        AVG(e.engagement_time_msec) / 60000 AS avg_engagement_time_min,
         
-        RANK() OVER (PARTITION BY sp.country ORDER BY AVG(e.time_msec) DESC) AS device_rank_by_country
+        RANK() OVER (PARTITION BY sp.country ORDER BY AVG(e.engagement_time_msec) DESC) AS device_rank
 
-FROM    `data-analytics-mate.DA.session_params` sp
+FROM    `data-analytics-mate.DA.session` s
+
+JOIN    `data-analytics-mate.DA.session_params` sp
+ON      s.ga_session_id = sp.ga_session_id
 
 JOIN    engagement_cte e
-ON      sp.ga_session_id = e.ga_session_id
+ON      s.ga_session_id = e.ga_session_id
 
-GROUP BY sp.country, sp.device
-ORDER BY sp.country, device_rank;
-
+GROUP BY  s.date, month_date, sp.country, sp.device
+ORDER BY  s.date, sp.country, device_rank;
