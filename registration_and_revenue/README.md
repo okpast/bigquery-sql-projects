@@ -1,6 +1,6 @@
 # Registration and Revenue Analysis
 
-SQL project created in Google BigQuery.
+SQL project built using Google BigQuery.
 
 ## Description
 
