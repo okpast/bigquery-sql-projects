@@ -24,6 +24,8 @@ SELECT  sp.country,
         
         SUM(p.price) AS revenue,        
         SUM(CASE WHEN sp.device = 'mobile' THEN p.price ELSE 0 END)  AS revenue_mobile,
+        SUM(CASE WHEN sp.device = 'desktop' THEN p.price ELSE 0 END) AS revenue_desktop,
+
         SUM(CASE WHEN sp.operating_system = 'iOS' THEN p.price ELSE 0 END) AS revenue_ios,
         SUM(CASE WHEN sp.operating_system = 'Android' THEN p.price ELSE 0 END) AS revenue_android
 
@@ -68,6 +70,8 @@ SELECT  reg.country,
 
         rev.revenue,
         rev.revenue_mobile,
+        rev.revenue_desktop,
+        
         rev.revenue_ios,
         rev.revenue_android,
 
@@ -81,4 +85,6 @@ AND     reg.date = rev.date
 
 LEFT JOIN email_cte AS em
 ON      reg.country = em.country
-AND     reg.date = em.date;
+AND     reg.date = em.date
+
+ORDER BY reg.date DESC;
