@@ -21,12 +21,9 @@ SELECT  s.date,
 
         COUNT(*) AS sessions,
 
-        AVG(e.engagement_time_msec) / 60000 AS avg_engagement_time_min,
-        
-        RANK() OVER (PARTITION BY sp.country ORDER BY AVG(e.engagement_time_msec) DESC) AS device_rank
+        AVG(e.engagement_time_msec) / 60000 AS avg_engagement_time_min
 
 FROM    `data-analytics-mate.DA.session` s
-
 JOIN    `data-analytics-mate.DA.session_params` sp
 ON      s.ga_session_id = sp.ga_session_id
 
@@ -34,4 +31,4 @@ JOIN    engagement_cte e
 ON      s.ga_session_id = e.ga_session_id
 
 GROUP BY  s.date, month_date, sp.country, sp.device
-ORDER BY  s.date, sp.country, device_rank;
+ORDER BY  s.date, sp.country;
