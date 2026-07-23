@@ -64,14 +64,22 @@ Compares actual and predicted revenue and calculates the revenue fulfillment per
 
 ### 4. User Engagement Analysis
 
-Analyzed:
+**Analyzed:**
 - Average user engagement time
-- Sessions by country and device
-- Session share by country and device
-- Device ranking by average engagement time within each country
+- Sessions
+- Session share by device
+- Average engagement time by country
+- Average engagement time by device
+- Device ranking by country
 
-SQL file:
-`user_engagement_analysis.sql`
+**Visualization:**
+- Looker Studio dashboard
+
+**Project:**
+[user_engagement_analysis](user_engagement_analysis/)
+
+**SQL file:**
+[user_engagement_analysis.sql](user_engagement_analysis/user_engagement_analysis.sql)
 
 ### 5. Account Email Performance
 
