@@ -21,6 +21,6 @@ Analyzes user engagement time and session metrics by country, device, and date.
 
 ## Dashboard
 
-[Open in Looker Studio](https://datastudio.google.com/reporting/661c1a6f-8658-4aa6-b68e-56af2577f7a5)
+[Open in Data Studio](https://datastudio.google.com/reporting/661c1a6f-8658-4aa6-b68e-56af2577f7a5)
 
 ![Dashboard](dashboard.png)
