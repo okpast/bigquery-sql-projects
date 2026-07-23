@@ -1,6 +1,6 @@
 -- Project: User Engagement Analysis
 -- Tool: Google BigQuery
--- Description: Analyzes average user engagement time and device ranking by country, device, and date.
+-- Description: Analyzes user engagement time and session metrics by country, device, and date.
 
 WITH engagement_cte AS (
 SELECT  ga_session_id,
