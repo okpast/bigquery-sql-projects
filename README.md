@@ -83,12 +83,11 @@ Compares actual and predicted revenue and calculates the revenue fulfillment per
 
 ### 5. Account Email Performance
 
-Analyzed:
-- Account metrics
+**Analyzed:**
+- Account activity
 - Email messages sent, opened, and visited
 - Country-level account and email totals
 - Top 10 countries by account and email activity
 
-SQL file:
-`account_email_performance.sql`
-
+**SQL file:**
+[account_email_performance.sql](account_email_performance.sql)
