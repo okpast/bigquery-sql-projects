@@ -21,6 +21,6 @@ Analyzes marketing performance and email campaign metrics by month.
 
 ## Dashboard
 
-[Open in Looker Studio](https://datastudio.google.com/reporting/d37de29e-8715-4bf3-978d-ddfdd1700fac)
+[Open in Data Studio](https://datastudio.google.com/reporting/d37de29e-8715-4bf3-978d-ddfdd1700fac)
 
 ![Dashboard](dashboard.png)
