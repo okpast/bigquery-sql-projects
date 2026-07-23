@@ -1,6 +1,6 @@
 -- Project: Account Email Performance
 -- Tool: Google BigQuery
--- Description: Analyzes account metrics, email metrics, and country rankings.
+-- Description: Analyzes account activity, email performance, and country rankings.
 
 WITH  account_agg AS (
 SELECT  s.date,
