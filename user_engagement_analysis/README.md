@@ -4,7 +4,7 @@ SQL project built using Google BigQuery.
 
 ## Description
 
-Analyzes user engagement and session metrics by country, device, and date.
+Analyzes user engagement time and session metrics by country, device, and date.
 
 ## Metrics
 
