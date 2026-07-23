@@ -20,7 +20,7 @@ SQL projects and analytics tasks using Google BigQuery.
 - Registrations
 
 **Visualization:**
-- Looker Studio dashboard
+- Data Studio dashboard
 
 **Project:**
 [sent_email_metrics](sent_email_metrics/)
@@ -54,7 +54,7 @@ Compares actual and predicted revenue and calculates the revenue fulfillment per
 - Emails sent
 
 **Visualization:**
-- Looker Studio dashboard
+- Data Studio dashboard
 
 **Project:**
 [registration_and_revenue](registration_and_revenue/)
@@ -73,7 +73,7 @@ Compares actual and predicted revenue and calculates the revenue fulfillment per
 - Device ranking by country
 
 **Visualization:**
-- Looker Studio dashboard
+- Data Studio dashboard
 
 **Project:**
 [user_engagement_analysis](user_engagement_analysis/)
