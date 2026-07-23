@@ -22,6 +22,6 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 ## Dashboard
 
-[Open in Looker Studio](https://datastudio.google.com/reporting/b3ea0cc8-6a30-4fef-8d0a-e81ad4b89bdd)
+[Open in Data Studio](https://datastudio.google.com/reporting/b3ea0cc8-6a30-4fef-8d0a-e81ad4b89bdd)
 
 ![Dashboard](dashboard.png)
