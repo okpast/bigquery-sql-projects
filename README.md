@@ -1,11 +1,12 @@
 # BigQuery SQL Projects
 
-SQL projects and analytics tasks using Google BigQuery.
+Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 ## Tools
 
 - SQL
 - Google BigQuery
+- Data Studio
 
 ## Projects
 
