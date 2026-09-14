@@ -4,7 +4,7 @@ SQL project built using Google BigQuery.
 
 ## Description
 
-Analyzes marketing performance and email campaign metrics by month.
+Analyzes monthly revenue, marketing costs, and email campaign performance.
 
 ## Metrics
 
