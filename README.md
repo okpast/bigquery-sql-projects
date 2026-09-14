@@ -14,11 +14,11 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 **Analyzed:**
 - Revenue
-- Marketing costs
-- Emails sent
-- Email open rate
-- Email click rate
-- Registrations
+- Marketing Cost
+- Emails Sent
+- Email Open Rate
+- Email Click Rate
+- Registration Count
 
 **Visualization:**
 - Data Studio dashboard
