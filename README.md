@@ -11,6 +11,7 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 ## Projects
 
 **Data Source:** `data-analytics-mate.DA`
+#### Data Source: `data-analytics-mate.DA`
 
 ### 1. Sent Email Metrics Analysis
 
