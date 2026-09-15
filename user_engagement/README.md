@@ -17,7 +17,7 @@ Analyzes user engagement time and session metrics by country, device, and date.
 
 ## SQL
 
-[user_engagement_analysis.sql](user_engagement_analysis.sql)
+[user_engagement.sql](user_engagement.sql)
 
 ## Dashboard
 
