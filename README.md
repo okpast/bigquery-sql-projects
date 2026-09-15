@@ -69,13 +69,15 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 ### 4. User Engagement Analysis
 
+Analyzes user engagement time and session metrics by country, device, and date.
+
 **Analyzed:**
-- Average user engagement time
+- Average User Engagement Time
 - Sessions
-- Session share by device
-- Average engagement time by country
-- Average engagement time by device
-- Device ranking by country
+- Session Share by Device
+- Average Engagement Time by Country
+- Average Engagement Time by Device
+- Device Ranking by Country
 
 **Visualization:**
 - Data Studio dashboard
