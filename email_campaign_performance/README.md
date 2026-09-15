@@ -6,6 +6,8 @@ SQL project built using Google BigQuery.
 
 Analyzes account activity, email campaign performance, and country-level rankings.
 
+**Data Source:** `data-analytics-mate.DA`
+
 ## Metrics
 
 - Account Activity
