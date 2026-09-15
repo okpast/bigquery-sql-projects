@@ -36,11 +36,11 @@ Analyzes monthly revenue, marketing costs, and email campaign performance.
 Compares actual and predicted revenue, calculates cumulative values, and measures revenue fulfillment over time.
 
 **Analyzed:**
-- Actual revenue
-- Predicted revenue
-- Cumulative revenue
-- Cumulative prediction
-- Revenue fulfillment percentage
+- Actual Revenue
+- Predicted Revenue
+- Cumulative Revenue
+- Cumulative Predicted Revenue
+- Revenue Fulfillment Percentage
 
 **SQL file:**
 [revenue_prediction_fulfillment.sql](revenue_prediction_fulfillment.sql)
