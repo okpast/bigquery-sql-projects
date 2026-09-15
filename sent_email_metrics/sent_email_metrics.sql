@@ -1,6 +1,6 @@
 -- Project: Sent Email Metrics Analysis
 -- Tool: Google BigQuery
--- Description: Analyzes marketing performance and email campaign metrics by month.
+-- Description: Analyzes monthly revenue, marketing costs, and email campaign performance.
 
 WITH revenue_cte AS (
 SELECT  s.date,
