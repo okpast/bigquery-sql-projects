@@ -88,13 +88,24 @@ Analyzes user engagement time and session metrics by country, device, and date.
 **SQL file:**
 [user_engagement_analysis.sql](user_engagement_analysis/user_engagement_analysis.sql)
 
-### 5. Account Email Performance
+### 5. Email Campaign Performance
+
+Analyzes account activity, email campaign performance, and country-level rankings.
 
 **Analyzed:**
-- Account activity
-- Email messages sent, opened, and visited
-- Country-level account and email totals
-- Top 10 countries by account and email activity
+- Account Activity
+- Emails Sent
+- Emails Opened
+- Emails Clicked
+- Country-Level Account Totals
+- Country-Level Email Totals
+- Top 10 Countries by Account and Email Activity
+
+**Visualization:**
+- Data Studio dashboard
+
+**Project:**
+[email_campaign_performance](email_campaign_performance/)
 
 **SQL file:**
-[account_email_performance.sql](account_email_performance.sql)
+[email_campaign_performance.sql](email_campaign_performance/email_campaign_performance.sql)
