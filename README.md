@@ -47,14 +47,16 @@ Compares actual and predicted revenue, calculates cumulative values, and measure
 
 ### 3. Registration and Revenue Analysis
 
+Analyzes registrations, revenue, and email metrics by country and date.
+
 **Analyzed:**
 - Sessions
 - Registrations
-- Registration rate
+- Registration Rate
 - Revenue
-- Revenue by device
-- Revenue by operating system
-- Emails sent
+- Revenue by Device
+- Revenue by Operating System
+- Emails Sent
 
 **Visualization:**
 - Data Studio dashboard
