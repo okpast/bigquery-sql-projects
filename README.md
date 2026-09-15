@@ -83,10 +83,10 @@ Analyzes user engagement time and session metrics by country, device, and date.
 - Data Studio dashboard
 
 **Project:**
-[user_engagement_analysis](user_engagement_analysis/)
+[user_engagement](user_engagement/)
 
 **SQL file:**
-[user_engagement_analysis.sql](user_engagement_analysis/user_engagement_analysis.sql)
+[user_engagement.sql](user_engagement/user_engagement.sql)
 
 ### 5. Email Campaign Performance
 
