@@ -6,6 +6,8 @@ SQL project built using Google BigQuery.
 
 Analyzes user engagement time and session metrics by country, device, and date.
 
+**Data Source:** `data-analytics-mate.DA`
+
 ## Metrics
 
 - Average Engagement Time
