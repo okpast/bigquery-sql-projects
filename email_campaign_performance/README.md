@@ -22,6 +22,6 @@ Analyzes account activity, email campaign performance, and country-level ranking
 
 ## Dashboard
 
-[Open in Data Studio](YOUR_DASHBOARD_LINK)
+[Open in Data Studio](https://datastudio.google.com/reporting/b54bd244-940a-4418-91e5-e99a3094a201)
 
 ![Dashboard](dashboard.png)
