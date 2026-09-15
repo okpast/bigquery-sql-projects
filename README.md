@@ -37,6 +37,8 @@ Analyzes monthly revenue, marketing costs, and email campaign performance.
 
 Compares actual and predicted revenue, calculates cumulative values, and measures revenue fulfillment over time.
 
+**Data Source:** `data-analytics-mate.DA`
+
 **Analyzed:**
 - Actual Revenue
 - Predicted Revenue
@@ -50,6 +52,8 @@ Compares actual and predicted revenue, calculates cumulative values, and measure
 ### 3. Registration and Revenue Analysis
 
 Analyzes registrations, revenue, and email metrics by country and date.
+
+**Data Source:** `data-analytics-mate.DA`
 
 **Analyzed:**
 - Sessions
@@ -73,6 +77,8 @@ Analyzes registrations, revenue, and email metrics by country and date.
 
 Analyzes user engagement time and session metrics by country, device, and date.
 
+**Data Source:** `data-analytics-mate.DA`
+
 **Analyzed:**
 - Average User Engagement Time
 - Sessions
@@ -93,6 +99,8 @@ Analyzes user engagement time and session metrics by country, device, and date.
 ### 5. Email Campaign Performance
 
 Analyzes account activity, email campaign performance, and country-level rankings.
+
+**Data Source:** `data-analytics-mate.DA`
 
 **Analyzed:**
 - Account Activity
