@@ -13,7 +13,10 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 | Project | Description | Data Source | Dashboard |
 |---|---|---|---|
 | [Sent Email Metrics](sent_email_metrics/) | Monthly revenue, costs and email performance | `data-analytics-mate.DA` | ✅ |
-| [Sales Analysis](sales_analysis/) | Sales performance by region | `another-project.sales` | ✅ |
+| [Revenue Prediction Fulfillment](revenue_prediction_fulfillment/) | Actual vs predicted revenue | `data-analytics-mate.DA` | — |
+| [Registration and Revenue](registration_and_revenue/) | Registrations, revenue and email metrics by country and date | `data-analytics-mate.DA` | ✅ |
+| [User Engagement](user_engagement/) | User engagement and session metrics by country and device | `data-analytics-mate.DA` | ✅ |
+| [Email Campaign Performance](email_campaign_performance/) | Email campaign performance and country-level rankings | `data-analytics-mate.DA` | ✅ |
 
 
 
