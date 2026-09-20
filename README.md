@@ -14,16 +14,6 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 Analyzes monthly revenue, marketing costs, and email campaign performance.
 
-**Data Source:** `data-analytics-mate.DA`
-
-**Analyzed:**
-- Revenue
-- Marketing Cost
-- Emails Sent
-- Email Open Rate
-- Email Click Rate
-- Registration Count
-
 **Visualization:**
 - Data Studio dashboard
 
