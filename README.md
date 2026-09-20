@@ -16,6 +16,7 @@ Analyzes monthly revenue, marketing costs, and email campaign performance.
 
 **Visualization:**
 - Data Studio dashboard
+- **Dashboard:** Data Studio
 
 **Project:**
 [sent_email_metrics](sent_email_metrics/)
