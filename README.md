@@ -20,23 +20,6 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 
 
-
-### 2. Revenue Prediction Fulfillment
-
-Compares actual and predicted revenue, calculates cumulative values, and measures revenue fulfillment over time.
-
-**Data Source:** `data-analytics-mate.DA`
-
-**Analyzed:**
-- Actual Revenue
-- Predicted Revenue
-- Cumulative Revenue
-- Cumulative Predicted Revenue
-- Revenue Fulfillment Percentage
-
-**SQL file:**
-[revenue_prediction_fulfillment.sql](revenue_prediction_fulfillment.sql)
-
 ### 3. Registration and Revenue Analysis
 
 Analyzes registrations, revenue, and email metrics by country and date.
