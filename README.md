@@ -20,29 +20,6 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 
 
-### 3. Registration and Revenue Analysis
-
-Analyzes registrations, revenue, and email metrics by country and date.
-
-**Data Source:** `data-analytics-mate.DA`
-
-**Analyzed:**
-- Sessions
-- Registrations
-- Registration Rate
-- Revenue
-- Revenue by Device
-- Revenue by Operating System
-- Emails Sent
-
-**Visualization:**
-- Data Studio dashboard
-
-**Project:**
-[registration_and_revenue](registration_and_revenue/)
-
-**SQL file:**
-[registration_and_revenue.sql](registration_and_revenue/registration_and_revenue.sql)
 
 ### 4. User Engagement Analysis
 
