@@ -20,30 +20,6 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 
 
-
-### 4. User Engagement Analysis
-
-Analyzes user engagement time and session metrics by country, device, and date.
-
-**Data Source:** `data-analytics-mate.DA`
-
-**Analyzed:**
-- Average User Engagement Time
-- Sessions
-- Session Share by Device
-- Average Engagement Time by Country
-- Average Engagement Time by Device
-- Device Ranking by Country
-
-**Visualization:**
-- Data Studio dashboard
-
-**Project:**
-[user_engagement](user_engagement/)
-
-**SQL file:**
-[user_engagement.sql](user_engagement/user_engagement.sql)
-
 ### 5. Email Campaign Performance
 
 Analyzes account activity, email campaign performance, and country-level rankings.
