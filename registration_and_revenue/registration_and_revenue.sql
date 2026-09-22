@@ -33,9 +33,9 @@ FROM    `data-analytics-mate.DA.order`  o
 JOIN    `data-analytics-mate.DA.product` p
 ON      o.item_id = p.item_id
 
-JOIN    `DA.session` s
+JOIN    `data-analytics-mate.DA.session` s
 ON      o.ga_session_id = s.ga_session_id
-JOIN    `DA.session_params` sp
+JOIN    `data-analytics-mate.DA.session_params` sp
 ON      s.ga_session_id = sp.ga_session_id
 
 GROUP BY sp.country, s.date
@@ -47,13 +47,13 @@ SELECT  sp.country,
         
         COUNT(DISTINCT es.id_message) AS sent_msg
 
-FROM    `DA.email_sent` es
+FROM    `data-analytics-mate.DA.email_sent` es
 
-JOIN    `DA.account_session` acs
+JOIN    `data-analytics-mate.DA.account_session` acs
 ON      es.id_account = acs.account_id
-JOIN    `DA.session` s
+JOIN    `data-analytics-mate.DA.session` s
 ON      acs.ga_session_id = s.ga_session_id
-JOIN    `DA.session_params` sp
+JOIN    `data-analytics-mate.DA.session_params` sp
 ON      acs.ga_session_id = sp.ga_session_id
 
 GROUP BY sp.country, s.date
@@ -78,7 +78,7 @@ SELECT  reg.country,
         em.sent_msg
 
 FROM    registration_cte AS reg
-  
+
 LEFT JOIN revenue_cte AS rev
 ON      reg.country = rev.country
 AND     reg.date = rev.date
