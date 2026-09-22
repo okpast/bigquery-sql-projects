@@ -21,20 +21,6 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 
 
 
-### 1. Sent Email Metrics Analysis
-
-Analyzes monthly revenue, marketing costs, and email campaign performance.
-
-**Visualization:**
-- Data Studio dashboard
-- **Dashboard:** Data Studio
-
-**Project:**
-[sent_email_metrics](sent_email_metrics/)
-
-**SQL file:**
-[sent_email_metrics.sql](sent_email_metrics/sent_email_metrics.sql)
-
 ### 2. Revenue Prediction Fulfillment
 
 Compares actual and predicted revenue, calculates cumulative values, and measures revenue fulfillment over time.
