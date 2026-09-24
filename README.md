@@ -17,29 +17,3 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 | [Registration and Revenue Analysis](registration_and_revenue/) | Registrations, revenue and email metrics by country and date | `data-analytics-mate.DA` | ✅ |
 | [User Engagement Analysis](user_engagement/) | User engagement and session metrics by country and device | `data-analytics-mate.DA` | ✅ |
 | [Email Campaign Performance](email_campaign_performance/) | Email campaign performance and country-level rankings | `data-analytics-mate.DA` | ✅ |
-
-
-
-### 5. Email Campaign Performance
-
-Analyzes account activity, email campaign performance, and country-level rankings.
-
-**Data Source:** `data-analytics-mate.DA`
-
-**Analyzed:**
-- Account Activity
-- Emails Sent
-- Emails Opened
-- Emails Clicked
-- Country-Level Account Totals
-- Country-Level Email Totals
-- Top 10 Countries by Account and Email Activity
-
-**Visualization:**
-- Data Studio dashboard
-
-**Project:**
-[email_campaign_performance](email_campaign_performance/)
-
-**SQL file:**
-[email_campaign_performance.sql](email_campaign_performance/email_campaign_performance.sql)
