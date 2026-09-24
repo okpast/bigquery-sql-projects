@@ -2,7 +2,7 @@
 -- Tool: Google BigQuery
 -- Description: Groups accounts into monthly registration cohorts and tracks send-based and open-based email engagement retention in each following month.
 
-WITH account_first_seen_cte AS (
+WITH account_registration_cte AS (
 SELECT  a.id AS account_id,
         s.date AS registration_date
 
@@ -44,7 +44,7 @@ SELECT  af.account_id,
         ea.open_cnt,
         ea.click_cnt
 
-FROM    account_first_seen_cte af
+FROM    account_registration_cte af
 JOIN    email_agg_cte ea
 ON      af.account_id = ea.account_id
 WHERE   ea.sent_date >= af.registration_date
@@ -54,7 +54,7 @@ cohort_size_cte AS (
 SELECT  DATE_TRUNC(registration_date, MONTH) AS cohort_month,
         COUNT(DISTINCT account_id) AS cohort_size
 
-FROM    account_first_seen_cte
+FROM    account_registration_cte
 GROUP BY cohort_month
 )
 
