@@ -24,7 +24,7 @@ with the session in which the account was registered.
 **Order/registration session overlap, by month:**
 - Order Sessions
 - Order Sessions With a Registration Session
-- Order Sessions Without Any Registration Session
+- Order Sessions Without Registration Session
 - % of Orders With a Registration Session
 
 ## Notes
