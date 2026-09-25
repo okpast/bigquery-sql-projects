@@ -1,6 +1,8 @@
 -- Project: Email Engagement Retention Analysis
 -- Tool: Google BigQuery
--- Description: Groups accounts into monthly registration cohorts and tracks send-based and open-based email engagement retention in each following month.
+-- Description: Groups accounts into monthly registration cohorts and tracks send-based
+--              and open-based email engagement retention (both absolute and month-over-month
+--              relative) in each following month.
 
 WITH account_registration_cte AS (
 SELECT  a.id AS account_id,
@@ -58,28 +60,39 @@ FROM    account_registration_cte
 GROUP BY cohort_month
 )
 
-SELECT  ce.cohort_month,
-        cs.cohort_size,
-        ce.month_number,
+SELECT  *,
+        ROUND(SAFE_DIVIDE(
+            sent_engaged_accounts,
+            LAG(sent_engaged_accounts) OVER (PARTITION BY cohort_month ORDER BY month_number)
+        ) * 100, 2) AS sent_relative_retention_rate,
+        ROUND(SAFE_DIVIDE(
+            open_engaged_accounts,
+            LAG(open_engaged_accounts) OVER (PARTITION BY cohort_month ORDER BY month_number)
+        ) * 100, 2) AS open_relative_retention_rate
 
-        -- Send-based retention: % of cohort who received at least one email
-        COUNT(DISTINCT ce.account_id) AS sent_engaged_accounts,
-        ROUND(SAFE_DIVIDE(COUNT(DISTINCT ce.account_id), cs.cohort_size) * 100, 2) AS sent_retention_rate,
+FROM (SELECT  ce.cohort_month,
+              cs.cohort_size,
+              ce.month_number,
 
-        -- Open-based retention: % of cohort who opened at least one email
-        COUNT(DISTINCT CASE WHEN ce.open_cnt > 0 THEN ce.account_id END) AS open_engaged_accounts,
-        ROUND(SAFE_DIVIDE(COUNT(DISTINCT CASE WHEN ce.open_cnt > 0 THEN ce.account_id END), cs.cohort_size) * 100, 2) AS open_retention_rate,
+              -- Send-based retention: % of cohort who received at least one email
+              COUNT(DISTINCT ce.account_id) AS sent_engaged_accounts,
+              ROUND(SAFE_DIVIDE(COUNT(DISTINCT ce.account_id), cs.cohort_size) * 100, 2) AS sent_retention_rate,
 
-        SUM(ce.sent_cnt) AS sent_cnt,
-        SUM(ce.open_cnt) AS open_cnt,
-        SUM(ce.click_cnt) AS click_cnt,
+              -- Open-based retention: % of cohort who opened at least one email
+              COUNT(DISTINCT CASE WHEN ce.open_cnt > 0 THEN ce.account_id END) AS open_engaged_accounts,
+              ROUND(SAFE_DIVIDE(COUNT(DISTINCT CASE WHEN ce.open_cnt > 0 THEN ce.account_id END), cs.cohort_size) * 100, 2) AS open_retention_rate,
 
-        ROUND(SAFE_DIVIDE(SUM(ce.open_cnt), SUM(ce.sent_cnt)) * 100, 2) AS open_rate,
-        ROUND(SAFE_DIVIDE(SUM(ce.click_cnt), SUM(ce.sent_cnt)) * 100, 2) AS click_rate
+              SUM(ce.sent_cnt) AS sent_cnt,
+              SUM(ce.open_cnt) AS open_cnt,
+              SUM(ce.click_cnt) AS click_cnt,
 
-FROM    cohort_events_cte ce
-JOIN    cohort_size_cte cs
-ON      ce.cohort_month = cs.cohort_month
+              ROUND(SAFE_DIVIDE(SUM(ce.open_cnt), SUM(ce.sent_cnt)) * 100, 2) AS open_rate,
+              ROUND(SAFE_DIVIDE(SUM(ce.click_cnt), SUM(ce.sent_cnt)) * 100, 2) AS click_rate
 
-GROUP BY ce.cohort_month, cs.cohort_size, ce.month_number
-ORDER BY ce.cohort_month, ce.month_number;
+      FROM    cohort_events_cte ce
+      JOIN    cohort_size_cte cs
+      ON      ce.cohort_month = cs.cohort_month
+
+      GROUP BY ce.cohort_month, cs.cohort_size, ce.month_number
+)
+ORDER BY cohort_month, month_number;
