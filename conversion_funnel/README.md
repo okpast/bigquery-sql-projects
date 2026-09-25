@@ -47,6 +47,4 @@ of whether the buyer registered in that specific session.
 
 ## SQL
 
-[conversion_funnel.sql](conversion_funnel.sql) Dashboard
-
-_No dashboard yet — SQL-only project._
+[conversion_funnel.sql](conversion_funnel.sql)
