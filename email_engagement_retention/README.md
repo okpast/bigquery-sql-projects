@@ -28,10 +28,12 @@ absolute retention (against the original cohort size) and relative retention
 
 - Relative retention rate = engaged accounts in month N / engaged accounts in month N-1. 
   Shows the month-over-month change in engaged account count, not a tracked overlap 
-  of the same accounts between months.
+  of the same accounts between months. Months with zero engaged accounts are included 
+  explicitly (not skipped), so this comparison is always against the true previous 
+  calendar month.
 
-- Sent-based engagement means the account received at least one email during the month. 
-  Open-based engagement means the account opened at least one email during the month.
+- Sent-based engagement means the account received at least one email during the month.
+- Open-based engagement means the account opened at least one email during the month.
 
 ## SQL
 
