@@ -38,3 +38,7 @@ absolute retention (against the original cohort size) and relative retention
 ## SQL
 
 [email_engagement_retention.sql](email_engagement_retention.sql)
+
+## Dashboard
+
+_No dashboard yet — SQL-only project._
