@@ -15,9 +15,9 @@ absolute retention (against the original cohort size) and relative retention
 
 - Cohort Size
 - Month Number (months since registration)
-- Sent-Based Engaged Accounts / Retention Rate (absolute, from cohort size)
-- Open-Based Engaged Accounts / Retention Rate (absolute, from cohort size)
-- Sent / Open Relative Retention Rate (month-over-month, from previous month's engaged accounts)
+- Sent-Based Engaged Accounts / Absolute Retention Rate
+- Open-Based Engaged Accounts / Absolute Retention Rate
+- Sent-Based / Open-Based Relative Retention Rate
 - Sent / Open / Click Counts
 - Open Rate / Click Rate
 
