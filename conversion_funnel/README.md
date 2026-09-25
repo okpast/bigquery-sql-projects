@@ -27,7 +27,7 @@ with the session in which the account was registered.
 - Order Sessions Without Any Registration Session
 - % of Orders With a Registration Session
 
-## Key Finding
+## Notes
 
 Only about 8% of order sessions coincide with the session in which the account 
 was registered. The remaining ~92% of orders happen in sessions with no 
