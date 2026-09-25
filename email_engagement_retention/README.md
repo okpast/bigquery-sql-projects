@@ -24,11 +24,14 @@ absolute retention (against the original cohort size) and relative retention
 ## Notes
 
 - Absolute retention rate = engaged accounts in month N / original cohort size. 
-  Shows what share of the original cohort is still active.
+  Shows what share of the original cohort remains engaged.
+
 - Relative retention rate = engaged accounts in month N / engaged accounts in month N-1. 
-  Shows month-over-month drop-off among those still active.
-- "Engaged" for sent-based metrics means the account received at least one email 
-  that month; for open-based metrics, it means the account opened at least one email.
+  Shows the month-over-month change in engaged account count, not a tracked overlap 
+  of the same accounts between months.
+
+- Sent-based engagement means the account received at least one email during the month. 
+  Open-based engagement means the account opened at least one email during the month.
 
 ## SQL
 
