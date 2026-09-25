@@ -32,7 +32,3 @@ calculate cost per registration, cost per order, and ROAS (return on ad spend).
 ## SQL
 
 [marketing_cost_efficiency.sql](marketing_cost_efficiency.sql)
-
-## Dashboard
-
-_No dashboard yet — SQL-only project._
