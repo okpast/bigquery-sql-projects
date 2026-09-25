@@ -18,4 +18,5 @@ Portfolio of data analytics projects built with Google BigQuery and Data Studio.
 | [User Engagement Analysis](user_engagement/) | User engagement and session metrics by country and device | `data-analytics-mate.DA` | ✅ |
 | [Email Campaign Performance](email_campaign_performance/) | Email campaign performance and country-level rankings | `data-analytics-mate.DA` | ✅ |
 | [Conversion Funnel Analysis](conversion_funnel/) | Session-to-registration-to-order funnel by month/country, plus registration-session overlap analysis | `data-analytics-mate.DA` | — |
+| [Marketing Cost Efficiency Analysis](marketing_cost_efficiency/) | Monthly cost per registration, cost per order, and ROAS | `data-analytics-mate.DA` | — |
 | [Email Engagement Retention Analysis](email_engagement_retention/) | Monthly registration cohorts, send- and open-based email retention (absolute and relative) | `data-analytics-mate.DA` | — |
