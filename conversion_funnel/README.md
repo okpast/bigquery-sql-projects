@@ -40,6 +40,13 @@ can exceed 100% (seen up to ~200% in the data): it counts all order sessions in 
 given month/country against registrations from that same month/country, regardless 
 of whether the buyer registered in that specific session.
 
+- `(not set)` as a country value reflects sessions where GA could not resolve 
+  geography — this is a data artifact, not a query error.
+- Rates show as `null` when the denominator (sessions or registrations) is zero 
+  for that month/country combination.
+
 ## SQL
 
-[conversion_funnel.sql](conversion_funnel.sql)
+[conversion_funnel.sql](conversion_funnel.sql) Dashboard
+
+_No dashboard yet — SQL-only project._
