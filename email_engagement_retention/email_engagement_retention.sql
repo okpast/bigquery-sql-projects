@@ -67,7 +67,8 @@ GROUP BY cohort_month
 -- that cohort actually has data for, so LAG() always compares true consecutive months.
 cohort_months_range_cte AS (
 SELECT  cs.cohort_month,
-        month_num AS month_number
+        cs.cohort_size,
+        month_offset AS month_number
 
 FROM    cohort_size_cte cs
 JOIN    (
@@ -77,7 +78,7 @@ JOIN    (
     GROUP BY cohort_month
 ) mx
 ON      cs.cohort_month = mx.cohort_month
-CROSS JOIN UNNEST(GENERATE_ARRAY(0, mx.max_month_number)) AS month_num
+CROSS JOIN UNNEST(GENERATE_ARRAY(0, mx.max_month_number)) AS month_offset
 )
 
 SELECT  *,
@@ -91,14 +92,14 @@ SELECT  *,
         ) * 100, 2) AS open_relative_retention_rate
 
 FROM (SELECT  cmr.cohort_month,
-              cs.cohort_size,
+              cmr.cohort_size,
               cmr.month_number,
 
               COALESCE(agg.sent_engaged_accounts, 0) AS sent_engaged_accounts,
-              ROUND(SAFE_DIVIDE(COALESCE(agg.sent_engaged_accounts, 0), cs.cohort_size) * 100, 2) AS sent_retention_rate,
+              ROUND(SAFE_DIVIDE(COALESCE(agg.sent_engaged_accounts, 0), cmr.cohort_size) * 100, 2) AS sent_retention_rate,
 
               COALESCE(agg.open_engaged_accounts, 0) AS open_engaged_accounts,
-              ROUND(SAFE_DIVIDE(COALESCE(agg.open_engaged_accounts, 0), cs.cohort_size) * 100, 2) AS open_retention_rate,
+              ROUND(SAFE_DIVIDE(COALESCE(agg.open_engaged_accounts, 0), cmr.cohort_size) * 100, 2) AS open_retention_rate,
 
               COALESCE(agg.sent_cnt, 0) AS sent_cnt,
               COALESCE(agg.open_cnt, 0) AS open_cnt,
@@ -108,8 +109,6 @@ FROM (SELECT  cmr.cohort_month,
               ROUND(SAFE_DIVIDE(COALESCE(agg.click_cnt, 0), COALESCE(agg.sent_cnt, 0)) * 100, 2) AS click_rate
 
       FROM    cohort_months_range_cte cmr
-      JOIN    cohort_size_cte cs
-      ON      cmr.cohort_month = cs.cohort_month
       LEFT JOIN cohort_agg_cte agg
       ON      cmr.cohort_month = agg.cohort_month
       AND     cmr.month_number = agg.month_number
