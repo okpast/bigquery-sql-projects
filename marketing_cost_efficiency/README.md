@@ -16,8 +16,8 @@ calculate cost per registration, cost per order, and ROAS (return on ad spend).
 - Order Sessions
 - Revenue
 - Cost per Registration
-- Cost per Order
-- ROAS (Revenue / Cost)
+- Cost per Order Session
+- Overall Revenue / Paid Search Cost (ROAS)
 
 ## Notes
 
