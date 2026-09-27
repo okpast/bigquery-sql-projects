@@ -6,12 +6,10 @@
 --              rows so relative retention always compares against the true previous month.
 
 WITH account_registration_cte AS (
-SELECT  a.id AS account_id,
+SELECT  acs.account_id,
         s.date AS registration_date
 
-FROM    `data-analytics-mate.DA.account` a
-JOIN    `data-analytics-mate.DA.account_session` acs
-ON      a.id = acs.account_id
+FROM    `data-analytics-mate.DA.account_session` acs
 JOIN    `data-analytics-mate.DA.session` s
 ON      acs.ga_session_id = s.ga_session_id
 ),
