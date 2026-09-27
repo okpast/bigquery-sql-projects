@@ -45,6 +45,9 @@ of whether the buyer registered in that specific session.
 - Rates show as `null` when the denominator (sessions or registrations) is zero 
   for that month/country combination.
 
+- Joins use `IS NOT DISTINCT FROM` instead of `=` to retain rows with unknown (`NULL`) countries.
+  This groups all NULL-country records together, preventing data loss but potentially merging distinct unknown cases.
+
 ## SQL
 
 [conversion_funnel.sql](conversion_funnel.sql)
