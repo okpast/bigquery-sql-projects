@@ -103,4 +103,4 @@ SELECT  DATE_TRUNC(date, MONTH) AS month_date,
 FROM    result_cte
         
 GROUP BY month_date
-ORDER BY month_date
+ORDER BY month_date;
