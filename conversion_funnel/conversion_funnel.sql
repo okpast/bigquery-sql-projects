@@ -69,10 +69,10 @@ SELECT  sc.month_date,
 FROM    session_cte sc
 LEFT JOIN registration_cte rc
 ON      sc.month_date = rc.month_date
-AND     sc.country = rc.country
+AND     sc.country IS NOT DISTINCT FROM rc.country
 LEFT JOIN order_cte oc
 ON      sc.month_date = oc.month_date
-AND     sc.country = oc.country
+AND     sc.country IS NOT DISTINCT FROM oc.country
 
 ORDER BY sc.month_date, sc.sessions DESC;
 
