@@ -36,6 +36,4 @@ Shows each row's share of all monthly sessions and revenue.
 
 ## SQL
 
-[traffic_channel_performance.sql](traffic_channel_performance.sql)oard
-
-_No dashboard yet — SQL-only project._
+[traffic_channel_performance.sql](traffic_channel_performance.sql)
