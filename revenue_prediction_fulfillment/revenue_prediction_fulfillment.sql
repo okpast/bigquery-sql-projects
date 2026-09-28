@@ -4,7 +4,7 @@
 
 WITH  revenue_predict_cte AS (
 SELECT  s.date,
-        SUM(p.price) AS revenue,
+        SUM(CAST(p.price AS NUMERIC)) AS revenue,
         0 AS predict
 FROM    `data-analytics-mate.DA.order`  o
 JOIN    `data-analytics-mate.DA.product` p
@@ -18,7 +18,7 @@ UNION ALL
 
 SELECT  date,
         0 AS revenue,
-        SUM(predict) AS predict
+        SUM(CAST(predict AS NUMERIC)) AS predict
 FROM    `data-analytics-mate.DA.revenue_predict`
 GROUP BY date
 )
@@ -27,9 +27,9 @@ SELECT  date,
         revenue,
         SUM(revenue) OVER (ORDER BY date) AS cumulative_revenue,
         predict,
-        SUM(predict) OVER (ORDER BY date) AS cumulative_predict,
+        SUM(predict) OVER (ORDER BY date) AS cumulative_predict, 
         
-        ROUND(SUM(revenue) OVER (ORDER BY date) / SUM(predict) OVER (ORDER BY date) * 100, 2) AS percentage
+        ROUND(SAFE_DIVIDE(SUM(revenue) OVER (ORDER BY date), SUM(predict) OVER (ORDER BY date)) * 100, 2) AS percentage
 
 FROM( SELECT  date,
               SUM(revenue) AS revenue,
