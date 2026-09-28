@@ -53,8 +53,8 @@ SELECT  sc.month_date,
 FROM    session_cte sc
 LEFT JOIN order_cte oc
 ON      sc.month_date = oc.month_date
-AND     sc.channel = oc.channel
-AND     sc.medium = oc.medium
+AND     sc.channel IS NOT DISTINCT FROM oc.channel
+AND     sc.medium IS NOT DISTINCT FROM oc.medium
 ),
 
 ranked_cte AS (
