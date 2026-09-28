@@ -21,7 +21,8 @@ SELECT  s.date,
 
         COUNT(*) AS sessions,
 
-        AVG(e.engagement_time_msec) / 60000 AS avg_engagement_time_min
+        ROUND(AVG(e.engagement_time_msec) / 60000, 2)  AS avg_engagement_time_min
+        
 
 FROM    `data-analytics-mate.DA.session` s
 JOIN    `data-analytics-mate.DA.session_params` sp
