@@ -37,4 +37,4 @@ FROM( SELECT  date,
       FROM    revenue_predict_cte
       GROUP BY date
     )
-ORDER BY date DESC
+ORDER BY date DESC;
