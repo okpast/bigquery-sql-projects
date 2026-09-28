@@ -1,7 +1,7 @@
 -- Project: Traffic Channel Performance Analysis
 -- Tool: Google BigQuery
 -- Description: Compares sessions, order sessions, revenue, and conversion rate across
---              traffic channels and mediums by month, limited to the top channels
+--              traffic channels and mediums by month, limited to the top 3 channels
 --              ranked by total revenue over the whole period.
 
 WITH session_cte AS (
