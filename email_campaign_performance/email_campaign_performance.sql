@@ -24,7 +24,7 @@ ON      acs.ga_session_id = s.ga_session_id
 JOIN    `data-analytics-mate.DA.session_params` sp
 ON      acs.ga_session_id = sp.ga_session_id
 
-GROUP BY 1, 2, 3, 4, 5
+GROUP BY  s.date, sp.country, a.send_interval, a.is_verified, a.is_unsubscribed
 ),
 
 email_agg AS (
