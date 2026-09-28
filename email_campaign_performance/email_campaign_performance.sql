@@ -79,7 +79,7 @@ FROM  ( SELECT  *
         FROM    email_agg
       )
 
-GROUP BY 1, 2, 3, 4, 5    
+GROUP BY date, country, send_interval, is_verified, is_unsubscribed
 ),
 
 country_agg AS (
