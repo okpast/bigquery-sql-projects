@@ -118,4 +118,4 @@ SELECT  date,
 
 FROM    final_cte
 WHERE   country_account_rank <= 10
-OR      country_sent_rank <= 10
+OR      country_sent_rank <= 10;
