@@ -29,7 +29,8 @@ Shows each row's share of all monthly sessions and revenue.
   because some combinations in the source data do not align (e.g. `Paid Search` 
   with `organic` medium).
 - `% of Monthly Sessions` and `% of Monthly Revenue` are calculated against all 
-  channels, before the top-3 filter is applied, so the shares are not inflated.
+  channels (window totals are computed in an earlier CTE), and the top-3 filter is 
+  applied only in the final SELECT, so the shares are not inflated.
 - Channel and medium values are shown as they appear in `session_params`, including 
   placeholders such as `(none)`, `<Other>` and `(data deleted)`.
 - Rates show as `null` when the denominator (sessions) is zero.
