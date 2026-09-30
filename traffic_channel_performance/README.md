@@ -33,6 +33,8 @@ Shows each row's share of all monthly sessions and revenue.
   applied only in the final SELECT, so the shares are not inflated.
 - Channel and medium values are shown as they appear in `session_params`, including 
   placeholders such as `(none)`, `<Other>` and `(data deleted)`.
+- Joins between session and order aggregates use `IS NOT DISTINCT FROM` for `channel`
+  and `medium`, so rows with NULL values remain matched instead of being lost.
 
 ## SQL
 
