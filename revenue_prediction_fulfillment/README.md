@@ -6,7 +6,9 @@ SQL project built using Google BigQuery.
 
 Compares actual and predicted revenue, calculates cumulative values using window functions, and measures revenue fulfillment over time.
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
