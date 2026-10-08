@@ -1,6 +1,6 @@
 # Email Campaign Performance
 
-SQL project built using Google BigQuery.
+SQL project built using Google BigQuery and Data Studio.
 
 ## Description
 
