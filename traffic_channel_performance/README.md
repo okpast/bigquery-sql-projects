@@ -8,7 +8,9 @@ Compares sessions, order sessions, revenue, and conversion rate across traffic
 channels and mediums by month, limited to the top 3 channels by total revenue. 
 Shows each row's share of all monthly sessions and revenue.
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
