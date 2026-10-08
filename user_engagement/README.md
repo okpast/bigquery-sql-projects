@@ -1,6 +1,6 @@
 # User Engagement Analysis
 
-SQL project built using Google BigQuery.
+SQL project built using Google BigQuery and Data Studio.
 
 ## Description
 
