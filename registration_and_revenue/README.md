@@ -6,7 +6,9 @@ SQL project built using Google BigQuery.
 
 Analyzes registrations, revenue, and email metrics by country and date.
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
