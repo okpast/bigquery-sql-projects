@@ -6,7 +6,9 @@ SQL project built using Google BigQuery.
 
 Analyzes monthly revenue, marketing costs, and email campaign performance.
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
