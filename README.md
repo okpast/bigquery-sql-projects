@@ -10,7 +10,7 @@ Portfolio of SQL and data analytics projects using Google BigQuery and Data Stud
 
 ## Projects
 
-| Project | Description | Data Source | Dashboard |
+| Project | Description | Dataset | Dashboard |
 |---|---|---|---|
 | [Sent Email Metrics Analysis](sent_email_metrics/) | Monthly revenue, costs and email performance | `data-analytics-mate.DA` | ✅ |
 | [Revenue Prediction Fulfillment](revenue_prediction_fulfillment/) | Actual vs predicted revenue | `data-analytics-mate.DA` | — |
