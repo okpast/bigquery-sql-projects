@@ -8,7 +8,9 @@ Tracks the funnel from session to registration to order, broken down by month an
 country, and separately measures what share of order sessions actually coincide 
 with the session in which the account was registered.
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
