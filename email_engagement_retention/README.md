@@ -9,7 +9,9 @@ open-based email engagement retention in each following month — measured both 
 absolute retention (against the original cohort size) and relative retention 
 (month-over-month).
 
-**Data Source:** `data-analytics-mate.DA`
+## Dataset
+
+`data-analytics-mate.DA`
 
 ## Metrics
 
