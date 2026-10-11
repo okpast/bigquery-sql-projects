@@ -2,7 +2,7 @@
 
 ## Description
 
-A long-format metrics table for analyzing A/B tests by date, country, device, continent, channel, test, and test group.
+Metrics for A/B tests by date, country, device, channel, test, and test group, combining sessions, orders, new accounts, and event counts in a single table.
 
 ## Dataset
 
