@@ -1,9 +1,10 @@
 -- Project: ab_test_analysis
 -- Tool: Google BigQuery
--- Description: Long-format metrics table for A/B tests (sessions, sessions with
---              orders, new accounts, event counts) by date, country, device,
---              continent, channel, test and test_group. Always filter by `test`
---              in BI: ~53% of sessions take part in more than one test.
+-- Description: A/B test metrics (sessions, sessions with orders, accounts
+--              created during registration sessions, and event counts)
+--              by date, country, device, continent, channel, test and test_group.
+--              Always filter by test in BI: ~53% of sessions take part
+--              in more than one test.
 
 WITH session_info AS (
   SELECT  s.ga_session_id,
