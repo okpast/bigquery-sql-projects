@@ -2,7 +2,7 @@
 
 ## Description
 
-Metrics for A/B tests by date, country, continent, device, channel, test, and test group, combining sessions, sessions with orders, accounts created during registration sessions, and event counts in a single table.
+Metrics for A/B tests by date, country, continent, device, channel, test, and test group, including sessions, sessions with orders, accounts created during registration sessions, and event counts.
 
 ## Dataset
 
