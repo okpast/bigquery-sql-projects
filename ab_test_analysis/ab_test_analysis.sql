@@ -2,7 +2,7 @@
 -- Tool: Google BigQuery
 -- Description: A/B test metrics (sessions, sessions with orders, accounts
 --              created during registration sessions, and event counts)
---              by date, country, device, continent, channel, test and test_group.
+--              by date, country, continent, device, channel, test and test_group.
 --              Always filter by test in BI: ~53% of sessions take part
 --              in more than one test.
 
