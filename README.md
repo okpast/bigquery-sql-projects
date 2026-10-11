@@ -20,4 +20,4 @@ Portfolio of SQL and data analytics projects using Google BigQuery and Data Stud
 | [Conversion Funnel Analysis](conversion_funnel/) | Session-to-registration-to-order funnel by month/country, plus registration-session overlap analysis | `data-analytics-mate.DA` | — |
 | [Traffic Channel Performance Analysis](traffic_channel_performance/) | Sessions, revenue, and conversion rate for the top 3 channels by revenue | `data-analytics-mate.DA` | — |
 | [Email Engagement Retention Analysis](email_engagement_retention/) | Monthly registration cohorts, send- and open-based email retention (absolute and relative) | `data-analytics-mate.DA` | — |
-| [A/B Test Metrics Analysis](ab_test_analysis/) | Sessions, sessions with orders, accounts, and event counts by date, country, continent, device, channel, test, and test group | `data-analytics-mate.DA` | — |
+| [A/B Test Metrics Analysis](ab_test_analysis/) | Sessions, sessions with orders, accounts, and events by date, country, continent, device, channel, test, and test group | `data-analytics-mate.DA` | — |
