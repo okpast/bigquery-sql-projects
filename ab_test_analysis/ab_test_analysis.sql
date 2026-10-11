@@ -11,8 +11,8 @@ WITH session_info AS (
   
           s.date,
           sp.country,
-          sp.device,
           sp.continent,
+          sp.device,
           sp.channel,
           ab.test,
           ab.test_group
@@ -24,14 +24,14 @@ WITH session_info AS (
 ),
 
 session_agg AS (
-  SELECT  date, country, device, continent, channel, test, test_group,
+  SELECT  date, country, continent, device, channel, test, test_group,
           COUNT(DISTINCT ga_session_id) AS session_cnt
   FROM    session_info
   GROUP BY ALL
 ),
 
 account_agg AS (
-  SELECT  si.date, si.country, si.device, si.continent, si.channel, si.test, si.test_group,
+  SELECT  si.date, si.country, si.continent, si.device, si.channel, si.test, si.test_group,
           COUNT(DISTINCT acs.account_id) AS new_account_cnt
   FROM    `DA.account_session` acs
   JOIN    session_info si
@@ -40,7 +40,7 @@ account_agg AS (
 ),
 
 session_order_agg AS (
-  SELECT  si.date, si.country, si.device, si.continent, si.channel, si.test, si.test_group,
+  SELECT  si.date, si.country, si.continent, si.device, si.channel, si.test, si.test_group,
           COUNT(DISTINCT o.ga_session_id) AS session_with_order_cnt
   FROM    `DA.order` o
   JOIN    session_info si
@@ -49,7 +49,7 @@ session_order_agg AS (
 ),
 
 event_agg AS (
-  SELECT  si.date, si.country, si.device, si.continent, si.channel, si.test, si.test_group,
+  SELECT  si.date, si.country, si.continent, si.device, si.channel, si.test, si.test_group,
           ep.event_name,
           COUNT(ep.ga_session_id) AS event_cnt
   FROM    `DA.event_params` ep
@@ -59,28 +59,28 @@ event_agg AS (
 )
 
 
-SELECT  date, country, device, continent, channel, test, test_group,
+SELECT  date, country, continent, device, channel, test, test_group,
         'session' AS event_name,
         session_cnt AS value
 FROM    session_agg
 
 UNION ALL
 
-SELECT  date, country, device, continent, channel, test, test_group,
+SELECT  date, country, continent, device, channel, test, test_group,
         'new_account' AS event_name,
         new_account_cnt AS value
 FROM    account_agg
 
 UNION ALL
 
-SELECT  date, country, device, continent, channel, test, test_group,
+SELECT  date, country, continent, device, channel, test, test_group,
         'session_with_orders' AS event_name,
         session_with_order_cnt AS value
 FROM    session_order_agg
 
 UNION ALL
 
-SELECT  date, country, device, continent, channel, test, test_group,
+SELECT  date, country, continent, device, channel, test, test_group,
         event_name,
         event_cnt AS value
 FROM    event_agg;
