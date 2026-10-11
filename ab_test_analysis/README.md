@@ -19,7 +19,7 @@ Metrics for A/B tests by date, country, device, continent, channel, test, and te
 
 - The output uses `event_name` and `value` to store different metrics in a single table.
 - Always filter by `test` in BI reports because approximately 53% of sessions participate in more than one test.
-- Metrics are aggregated by date, country, device, continent, channel, test, and test group.
+- Metrics are aggregated by date, country, continent, device, channel, test, and test group.
 - Accounts are counted using distinct `account_id` values from `account_session` records linked to registration sessions.
 
 ## SQL
